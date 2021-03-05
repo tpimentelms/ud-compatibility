@@ -1,7 +1,7 @@
 import csv
 from pathlib import Path
 from typing import Dict, FrozenSet, Iterable, NamedTuple, NewType
-from collections.abc import Set
+from typing import Set
 
 from paths import UD2UM_FILE
 

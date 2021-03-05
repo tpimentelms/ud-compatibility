@@ -44,6 +44,7 @@ _languages = [
     ("tr", "tur", "Turkish"),
     ("uk", "ukr", "Ukrainian"),
     ("ur", "urd", "Urdu"),
+    ("ckt_amguema", "ckt", "Chukchi-Amguema"),
 ]
 
 

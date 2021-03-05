@@ -1,3 +1,4 @@
+import sys
 from pathlib import Path
 from typing import List, Tuple
 
@@ -5,10 +6,10 @@ from languages import LanguageCoding
 
 # These must be pathlib Path objects.
 # Easy way: Path('whatever/my/path/is')
-_ROOT = Path("/Users/arya/Desktop/UD_UM") / "data" / "raw"
+_ROOT = Path(sys.path[0]) / "data" / "raw"
 UM_FOLDER = _ROOT / "UM"
 UD_FOLDER = _ROOT / "UD"
-UD2UM_FILE = Path(".") / "UD-UniMorph.tsv"
+UD2UM_FILE = Path(sys.path[0]) / "UD-UniMorph.tsv"
 
 
 class FileGetter:

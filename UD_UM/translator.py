@@ -230,6 +230,22 @@ class CatalanTranslator(Translator):
         return UmTag(";".join(tags))
 
 
+class Chukchi_AmguemaTranslator(Translator):
+    def basic_convert(self, ud_tag: UdTag) -> UmTag:
+        new_parts = []
+        for part in ud_tag:
+            part = part.replace('Person[obj]', 'Person')
+            part = part.replace('Number[obj]', 'Number')
+            part = part.replace('Person[subj]', 'Person')
+            part = part.replace('Number[subj]', 'Number')
+
+            new_parts += [part]
+
+        ud_tag = UdTag('|'.join(new_parts))
+        # import ipdb; ipdb.set_trace()
+        return ud2um(ud_tag)
+
+
 class CzechTranslator(Translator):
     def lgspec_modify(self, cols: CoNLLRow, um: UmTag) -> UmTag:
         tags = set(um.split(";"))
