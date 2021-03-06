@@ -234,8 +234,8 @@ class Chukchi_AmguemaTranslator(Translator):
     def basic_convert(self, ud_tag: UdTag) -> UmTag:
         new_parts = []
         for part in ud_tag:
-            part = part.replace('Person[obj]', 'Person')
-            part = part.replace('Number[obj]', 'Number')
+            part = part.replace('Person[obj]', 'Person[abs]')
+            part = part.replace('Number[obj]', 'Number[abs]')
             part = part.replace('Person[subj]', 'Person')
             part = part.replace('Number[subj]', 'Number')
 
